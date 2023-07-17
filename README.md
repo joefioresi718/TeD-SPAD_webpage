@@ -6,7 +6,7 @@ If you find TeD-SPAD useful for your work please cite:
 ```
 @inproceedings{fioresi2023tedspad,
   title={TeD-SPAD: Temporal Distinctiveness for Self-supervised Privacy-preservation for video Anomaly Detection},
-  author={Fioresi, Joseph and Rajendrakumar, Ishan and Shah, Mubarak},
+  author={Fioresi, Joseph and Rajendrakumar Dave, Ishan and Shah, Mubarak},
   booktitle={ICCV},
   year={2023}
 }
