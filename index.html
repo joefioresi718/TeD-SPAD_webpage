@@ -245,31 +245,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+			Video anomaly detection (VAD) without human monitoring is a difficult computer vision task 
+			that can have a positive impact on society if implemented successfully. 
+			While recent advances have made significant progress in solving this task, 
+			most existing approaches overlook a critical real-world concern: privacy. 
+			With the increasing popularity of artificial intelligence technologies, 
+			it becomes crucial to implement proper AI ethics into their development. 
+			Privacy leakage in VAD allows models to pick up and amplify unnecessary biases related to 
+			people’s personal information, which may lead to undesirable decision making. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+			In this paper, we propose TeD-SPAD, 
+			a privacy-aware video anomaly detection framework that destroys visual private information in a self-supervised manner. 
+			In particular, we explore the impact of temporally-distinctive video representations for VAD, 
+			finding that temporal distinctiveness pairs well with current anomaly feature representation learning methods. 
+			We achieve a positive trade-off between privacy protection and utility anomaly detection performance 
+			on three popular weakly supervised VAD datasets: UCF-Crime, XD-Violence, and ShanghaiTech. 
+			Our proposed anonymization model reduces private attribute prediction by 32.25% while only reducing 
+			frame-level ROC AUC on the UCF-Crime anomaly detection dataset by 3.69%.
           </p>
         </div>
       </div>
