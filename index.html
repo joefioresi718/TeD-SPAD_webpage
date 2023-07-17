@@ -163,39 +163,99 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/TeaserFigure.png" alt="TeD-SPAD Teaser" class="teaser-image">
-      <h2 class="subtitle has-text-centered">
-        TeD-SPAD removes private attributes from videos without requring any annotations.
-		Anonymized videos can be used with minimal utility loss in video anomaly detection. 
-      </h2>
-    </div>
-  </div>
+	<center>
+		<div class="container is-max-desktop">
+			<div class="hero-body">
+			  <img src="./static/images/TeaserFigure.png" alt="TeD-SPAD Teaser" class="teaser-image">
+			  <h2 class="subtitle has-text-centered">
+				TeD-SPAD removes private attributes from videos without requring any annotations.
+				Anonymized videos can be used with minimal utility loss in video anomaly detection. 
+			  </h2>
+			</div>
+		  </div>
+	</center>
 </section>
 
+<style> 
+    /* .results-carousel {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    } */
+
+	.gif-pair {
+      width: 100%;
+      height: 100%;
+      scroll-snap-align: start;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      /* align-items: center;
+	  align-self: center; */
+      /* padding: 10px; */
+    }
+
+</style>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-assault-raw">
-          <video poster="" id="assault-raw" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/raw_Assault033_x264-Anomaly01.gif"
-                    type="video/gif">
-          </video>
+	  <div class="container">
+		<center>
+			<h2 class="title is-3">Anonymization Visualizations</h2>
+		</center>
+		<div id="results-carousel" class="carousel results-carousel">
+			<div class="item active">
+				<center>
+					<h2 class="title is-4">UCF-Crime: Assault033_x264.mp4</h2>
+					<div class="gif-pair">
+						<div>
+							<h2 class="title is-5">Raw</h2>
+							<img src="./static/videos/raw_Assault033_x264-Anomaly01.gif" id="assault-raw">
+						</div>
+						<div>
+							<h2 class="title is-5">Anonymized</h2>
+							<img src="./static/videos/anon_Assault033_x264-Anomaly01.gif" id="assault-anon">
+						</div>
+					</div>
+				</center>
+			</div>
+			<div class="item">
+				<center>
+					<h2 class="title is-4">UCF-Crime: Fighting015_x264.mp4</h2>
+					<div class="gif-pair">
+						<div>
+							<h2 class="title is-5">Raw</h2>
+							<img src="./static/videos/raw_Fighting015_x264-Anomaly01.gif" id="fighting-raw">
+						</div>
+						<div>
+							<h2 class="title is-5">Anonymized</h2>
+							<img src="./static/videos/anon_Fighting015_x264-Anomaly01.gif" id="fighting-anon">
+						</div>
+					</div>
+				</center>
+			</div>
+			<div class="item">
+				<center>
+					<h2 class="title is-4">UCF-Crime: Shoplifting026_x264.mp4</h2>
+					<div class="gif-pair">
+						<div>
+							<h2 class="title is-5">Raw</h2>
+							<img src="./static/videos/raw_Shoplifting026_x264-Anomaly01.gif" id="shoplifting-raw">
+						</div>
+						<div>
+							<h2 class="title is-5">Anonymized</h2>
+							<img src="./static/videos/anon_Shoplifting026_x264-Anomaly01.gif" id="shoplifting-anon">
+						</div>
+					</div>
+				</center>
+			</div>
         </div>
-		<div class="item item-assault-anon">
-		  <video poster="" id="assault-anon" autoplay controls muted loop playsinline height="100%">
-			<source src="./static/videos/anon_Assault033_x264-Anomaly01.gif"
-					type="video/gif">
-		  </video>
-		</div>
-      </div>
     </div>
   </div>
 </section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
