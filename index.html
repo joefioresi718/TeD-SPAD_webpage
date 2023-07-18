@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="TeD-SPAD utilized temporally distinctive video representations to localize anomalous video segments under privacy constraints.">
-  <meta name="keywords" content="Anomaly Detection, TeD-SPAD, Temporal Distinctiveness">
+  <meta name="keywords" content="Anomaly Detection, TeD-SPAD, Temporal Distinctiveness, ICCV 2023">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TeD-SPAD: Temporal Distinctiveness for Self-supervised Privacy-preservation for video Anomaly Detection</title>
 
@@ -88,7 +88,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TeD-SPAD: Temporal Distinctiveness for Self-supervised Privacy-preservation for video Anomaly Detection</h1>
+          <h1 class="title is-1 publication-title">TeD-SPAD: Temporal Distinctiveness for Self-supervised Privacy-preservation for video Anomaly Detection [ICCV 2023]</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://joefioresi718.github.io/">Joseph Fioresi</a><sup>1</sup>,</span>
@@ -166,7 +166,7 @@
 	<center>
 		<div class="container is-max-desktop">
 			<div class="hero-body">
-			  <img src="./static/images/TeaserFigure.png" alt="TeD-SPAD Teaser" class="teaser-image">
+			  <img src="./static/images/TeaserFigure.svg" alt="TeD-SPAD Teaser" class="teaser-image">
 			  <h2 class="subtitle has-text-centered">
 				TeD-SPAD removes private attributes from videos without requring any annotations.
 				Anonymized videos can be used with minimal utility loss in video anomaly detection. 
@@ -199,6 +199,52 @@
     }
 
 </style>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+			Video anomaly detection (VAD) without human monitoring is a difficult computer vision task 
+			that can have a positive impact on society if implemented successfully. 
+			While recent advances have made significant progress in solving this task, 
+			most existing approaches overlook a critical real-world concern: privacy. 
+			With the increasing popularity of artificial intelligence technologies, 
+			it becomes crucial to implement proper AI ethics into their development. 
+			Privacy leakage in VAD allows models to pick up and amplify unnecessary biases related to 
+			people’s personal information, which may lead to undesirable decision making. 
+          </p>
+          <p>
+			In this paper, we propose TeD-SPAD, 
+			a privacy-aware video anomaly detection framework that destroys visual private information in a self-supervised manner. 
+			In particular, we explore the impact of temporally-distinctive video representations for VAD, 
+			finding that temporal distinctiveness pairs well with current anomaly feature representation learning methods. 
+			We achieve a positive trade-off between privacy protection and utility anomaly detection performance 
+			on three popular weakly supervised VAD datasets: UCF-Crime, XD-Violence, and ShanghaiTech. 
+			Our proposed anonymization model reduces private attribute prediction by 32.25% while only reducing 
+			frame-level ROC AUC on the UCF-Crime anomaly detection dataset by 3.69%.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -257,65 +303,123 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-			Video anomaly detection (VAD) without human monitoring is a difficult computer vision task 
-			that can have a positive impact on society if implemented successfully. 
-			While recent advances have made significant progress in solving this task, 
-			most existing approaches overlook a critical real-world concern: privacy. 
-			With the increasing popularity of artificial intelligence technologies, 
-			it becomes crucial to implement proper AI ethics into their development. 
-			Privacy leakage in VAD allows models to pick up and amplify unnecessary biases related to 
-			people’s personal information, which may lead to undesirable decision making. 
-          </p>
-          <p>
-			In this paper, we propose TeD-SPAD, 
-			a privacy-aware video anomaly detection framework that destroys visual private information in a self-supervised manner. 
-			In particular, we explore the impact of temporally-distinctive video representations for VAD, 
-			finding that temporal distinctiveness pairs well with current anomaly feature representation learning methods. 
-			We achieve a positive trade-off between privacy protection and utility anomaly detection performance 
-			on three popular weakly supervised VAD datasets: UCF-Crime, XD-Violence, and ShanghaiTech. 
-			Our proposed anonymization model reduces private attribute prediction by 32.25% while only reducing 
-			frame-level ROC AUC on the UCF-Crime anomaly detection dataset by 3.69%.
-          </p>
-        </div>
+<section class="section" id="paper-details">
+	<div class="container is-max-desktop">
+		<div class="columns is-centered">
+			<h2 class="title is-3">Paper Details</h2>
+		</div>
+    <h2 class="title is-4">Method Diagram</h2>
+    <div class="column has-text-justified">
+      <div class="method-diagram">
+        <img style="padding-top:10px" src="./static/images/method_diagram.svg">
+        <h2 class="content has-text-justified">
+          This diagram shows our privacy-preserved anomaly detection workflow along with the proxy anonymization training. 
+          The lower half shows training the UNet anonymizer and the I3D action classifier along with the temporal-distinctive triplet loss. 
+          After training the anonymizer and feature extractor, the now anonymized anomaly dataset videos are passed through any WSAD algorithm, 
+          outputting frame level anomaly scores for evaluation.</h2>
       </div>
     </div>
-    <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+    <h2 class="title is-4">Anomaly Feature Representation Learning</h2>
+    <div class="column has-text-justified">
+      <h2 class="content has-text-justified">
+        Many weakly supervised anomaly detection (WSAD) papers such as the <a href="https://arxiv.org/pdf/2211.15098.pdf">MGFN</a> model used in this work find that variation between feature magnitudes 
+        of video segments are useful for localizing anomalous segments in videos. Based on this observation, we speculate that detecting anomalies in long, 
+        untrimmed videos requires temporally distinctive reasoning to determine whether events in the same scene are anomalous. The figure below shows
+        the separation objective of the magnitude contrastive loss proposed by the authors of <a href="https://arxiv.org/pdf/2211.15098.pdf">MGFN</a>.
+      </h2>
+      <div class="column is-centered">
+        <img style="padding-left: 5%; display: flex; width: 50%; height: 50%; margin: auto;" src="./static/images/mgfn_magcon.png">
       </div>
-    </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
+      
+    </div>
+  
 
-<section class="section" id="method-diagram">
-	<div class="container is-max-desktop">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-four-fifths">
-			<h2 class="title is-3">Method Diagram</h2>
-				<div class="method-diagram">
-					<img src="./static/images/method_diagram.svg">
-				</div>
-			</div>
-		</div>
+    <h2 class="title is-4">Self-Supervised Privacy Preservation</h2>
+    <div class="column is-4">
+      <img src="./static/images/Temp-DistLoss.svg">
+    </div>
+    <div class="column has-text-justified">
+      <h2 class="content has-text-justified">
+        We propose a self-supervised privacy preservation method that uses a triplet loss to enforce temporal distinctiveness 
+        of the learned feature representations. 
+
+        <!-- We use a UNet architecture to anonymize each video frame along with I3D as the action classification/feature extraction model.  -->
+        The anonymizer, utility feature extractor, and budget model are trained jointly in an adversarial manner. 
+        The utility model is trained with a weighted combination of standard cross-entropy loss along with with the triplet contrastive loss,
+        which is composed of a positive pair of stochastically augmented clips and a negative clip from a different timestep in the same video. 
+        
+        Need to update this section.
+        <!-- We design a temporal-distinctive triplet loss, which increases the agreement 
+        between temporally-aligned clips of the same video and increases dissimilarity between representations of the clips which are temporally misaligned. -->
+        
+      </h2>
+    </div>
 	</div>
 </section>
 
+<section class="section" id="results">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Results</h2>
+    <img src="./static/images/tradeoff_plots.png">
+    <div class="column has-text-justified">
+      <h2 class="content has-text-justified">
+        <p>
+          Trade-off plots between anomaly detection benchmarks AUC and VISPR 
+          privacy attribute prediction cMAP for different privacy preserving methods. 
+          Optimal trade-off point is top left of plot (higher AD performance, lower PA prediction ability).
+          Our method is able to achieve a better trade-off than the other methods by incorporating
+          the temporal-distinctiveness objective.
+        </p>
+        <p>
+          Below are qualitative results highlighting the improvement in both privacy preservation and anomaly detection performance
+          when compared to existing privacy preserving techniques.
+        </p>
+      </h2>
+      <img src="./static/images/results_table.png">
+      <!-- <table>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table> -->
+    </div>
+  </div>
+</section>
+
+<section class="section" id="conclusion">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Conclusion</h2>
+    <div class="column has-text-justified">
+      <h2 class="content has-text-justified">
+        <p>
+          In this paper, we highlight the importance of privacy, a previously neglected aspect of video anomaly detection. 
+          We present TeD-SPAD, a framework for applying Temporal Distinctiveness to Self-supervised Privacy-preserving video Anomaly Detection. 
+          Ted-SPAD demonstrates the effectiveness of using a temporal-distinctive triplet loss while anonymizing an action recognition model, 
+          as it enhances feature representation temporal distinctiveness, which complements the downstream anomaly detection model. 
+          By effectively destroying spatial private information, we remove the model's ability to use this information in its decision-making process. 
+          As a future research direction, this framework can be extended to other tasks, such as spatio-temporal anomaly detection. 
+          The anonymizing encoder-decoder may also be made more powerful with techniques using recent masked image modeling. 
+          It is our hope that this work contributes to the development of more responsible and unbiased automated anomaly detection systems.
+        </p>
+        <p>
+          For more technical details and results, check out our attached main paper, thank you!
+        </p>
+      </h2>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
