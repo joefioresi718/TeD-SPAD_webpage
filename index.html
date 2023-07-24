@@ -299,6 +299,10 @@
         The anonymizer, utility feature extractor, and budget model are trained jointly in an adversarial manner. 
         The utility model is trained with a weighted combination of standard cross-entropy loss along with with the triplet contrastive loss,
         which is composed of a positive pair of stochastically augmented clips and a negative clip from a different timestep in the same video. 
+        <p>
+          The learned temporally-distinctive representations are useful in the downstream anomaly detection task. In the next section, we show that
+        even under anonymization constraints, these representations perform on par with raw video representations. 
+        </p>
         
         <!-- Need to update this section. -->
         <!-- We design a temporal-distinctive triplet loss, which increases the agreement 
